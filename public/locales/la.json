@@ -1,0 +1,43 @@
+{
+  "page_titles": {
+    "Login": "Inscribe",
+    "Home": "Home",
+    "CreateDialogue": "Create Dialogus",
+    "Dialogue": "Dialogus",
+    "EditDialogue": "Edit Dialogus",
+    "DialogueList": "Dialogus index",
+    "DictationList": "Dictatio album",
+    "CreateDictation": "Dictatum crea",
+    "Dictation": "Dictatio",
+    "CreateTranslations": "Translations",
+    "Translation": "Translation",
+    "TranslationList": "Index translationis"
+  },
+  "menu_names": {
+    "Dialogues": "Dialogi",
+    "Comics": "Comics",
+    "Dictation": "Dictationes",
+    "Translations": "Translations"
+  },
+  "fields": {
+    "title": "Titulus",
+    "type": "Type",
+    "description": "Descriptio",
+    "IsPublic": "Estne publica?",
+    "originalLanguage": "Lingua originalis",
+    "translatedLanguage": "Lingua translata",
+    "originalText": "Original text",
+    "translatedText": "Translated text",
+    "yourText": "Your text"
+  },
+  "buttons": {
+    "Create": "Create",
+    "Translate": "translate",
+    "translate": "translate",
+    "voice": "vox",
+    "save": "salvare"
+  },
+  "page_title": {
+    "MainTitle": "Mongoose adiutor"
+  }
+}

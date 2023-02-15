@@ -1,0 +1,43 @@
+{
+  "page_titles": {
+    "Login": "S'identifier",
+    "CreateDialogue": "Créer un dialogue",
+    "Home": "Maison",
+    "Dialogue": "Dialogue",
+    "EditDialogue": "Modifier la boîte de dialogue",
+    "DialogueList": "Liste des dialogues",
+    "DictationList": "Liste de dictée",
+    "CreateDictation": "Créer une dictée",
+    "Dictation": "Dictation",
+    "CreateTranslations": "Traductions",
+    "Translation": "Traduction",
+    "TranslationList": "Liste de traduction"
+  },
+  "menu_names": {
+    "Dialogues": "Dialogues",
+    "Comics": "Des bandes dessinées",
+    "Dictation": "Dictées",
+    "Translations": "Traductions"
+  },
+  "fields": {
+    "title": "Titre",
+    "type": "Taper",
+    "description": "Description",
+    "IsPublic": "Est publique ?",
+    "originalLanguage": "Langue originale",
+    "translatedLanguage": "Langue traduite",
+    "originalText": "Texte original",
+    "translatedText": "Texte traduit",
+    "yourText": "Ton texte"
+  },
+  "buttons": {
+    "Create": "Créer",
+    "Translate": "traduire",
+    "translate": "traduire",
+    "voice": "voix",
+    "save": "sauvegarder"
+  },
+  "page_title": {
+    "MainTitle": "Aide à la mangouste"
+  }
+}

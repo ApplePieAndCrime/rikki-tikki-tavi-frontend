@@ -1,0 +1,43 @@
+{
+  "page_titles": {
+    "Login": "Iniciar sesión",
+    "Home": "Hogar",
+    "CreateDialogue": "Crear diálogo",
+    "Dialogue": "Diálogo",
+    "EditDialogue": "Editar diálogo",
+    "DialogueList": "Lista de diálogo",
+    "DictationList": "Lista de dictados",
+    "CreateDictation": "Crear dictado",
+    "Dictation": "Dictado",
+    "CreateTranslations": "Traducciones",
+    "Translation": "Traducción",
+    "TranslationList": "Lista de traducción"
+  },
+  "menu_names": {
+    "Dialogues": "Diálogos",
+    "Comics": "Historietas",
+    "Dictation": "dictados",
+    "Translations": "Traducciones"
+  },
+  "fields": {
+    "title": "Título",
+    "type": "Tipo",
+    "description": "Descripción",
+    "IsPublic": "es publico?",
+    "originalLanguage": "Idioma original",
+    "translatedLanguage": "Idioma traducido",
+    "originalText": "Texto original",
+    "translatedText": "Texto traducido",
+    "yourText": "Tu texto"
+  },
+  "buttons": {
+    "Create": "Crear",
+    "Translate": "traducir",
+    "translate": "traducir",
+    "voice": "voz",
+    "save": "ahorrar"
+  },
+  "page_title": {
+    "MainTitle": "ayudante de mangosta"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "page_titles": {
+    "CreateDialogue": "Luo vuoropuhelu",
+    "Login": "Kirjaudu sisään",
+    "Home": "Koti",
+    "Dialogue": "Dialogi",
+    "EditDialogue": "Muokkaa dialogia",
+    "DialogueList": "Dialogiluettelo",
+    "DictationList": "Saneluluettelo",
+    "CreateDictation": "Luo sanelu",
+    "Dictation": "Sanelu",
+    "CreateTranslations": "Käännökset",
+    "Translation": "Käännös",
+    "TranslationList": "Käännösluettelo"
+  },
+  "menu_names": {
+    "Dialogues": "Dialogit",
+    "Comics": "Sarjakuvat",
+    "Dictation": "Sanelut",
+    "Translations": "Käännökset"
+  },
+  "fields": {
+    "title": "Otsikko",
+    "type": "Tyyppi",
+    "description": "Kuvaus",
+    "IsPublic": "Onko julkinen?",
+    "originalLanguage": "Alkuperäinen kieli",
+    "translatedLanguage": "Käännetty kieli",
+    "originalText": "Alkuperäinen teksti",
+    "translatedText": "Käännetty teksti",
+    "yourText": "Sinun tekstisi"
+  },
+  "buttons": {
+    "Create": "Luoda",
+    "Translate": "Kääntää",
+    "translate": "Kääntää",
+    "voice": "ääni",
+    "save": "Tallentaa"
+  },
+  "page_title": {
+    "MainTitle": "Mongoose-apulainen"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "page_titles": {
+    "CreateDialogue": "Dialog schaffen",
+    "Login": "anmelden",
+    "Home": "Heim",
+    "Dialogue": "Dialog",
+    "EditDialogue": "Dialog bearbeiten",
+    "DialogueList": "Dialogliste",
+    "DictationList": "Diktatliste",
+    "CreateDictation": "Diktat erstellen",
+    "Dictation": "Diktat",
+    "CreateTranslations": "Übersetzungen",
+    "Translation": "Übersetzung",
+    "TranslationList": "Übersetzungsliste"
+  },
+  "menu_names": {
+    "Dialogues": "Dialoge",
+    "Comics": "Comics",
+    "Dictation": "Diktate",
+    "Translations": "Übersetzungen"
+  },
+  "fields": {
+    "title": "Titel",
+    "type": "Typ",
+    "description": "Beschreibung",
+    "IsPublic": "Ist öffentlich?",
+    "originalLanguage": "Ursprache",
+    "translatedLanguage": "Übersetzte Sprache",
+    "originalText": "Original Text",
+    "translatedText": "Übersetzter Text",
+    "yourText": "Dein Text"
+  },
+  "buttons": {
+    "Create": "Erstellen",
+    "Translate": "übersetzen",
+    "translate": "übersetzen",
+    "voice": "Stimme",
+    "save": "speichern"
+  },
+  "page_title": {
+    "MainTitle": "Mungo-Helfer"
+  }
+}

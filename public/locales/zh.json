@@ -1,0 +1,43 @@
+{
+  "page_titles": {
+    "Login": "登入",
+    "CreateDialogue": "创建对话",
+    "Home": "家",
+    "Dialogue": "对话",
+    "EditDialogue": "编辑对话",
+    "DialogueList": "对话列表",
+    "DictationList": "听写清单",
+    "CreateDictation": "创建听写",
+    "Dictation": "听写",
+    "CreateTranslations": "翻译",
+    "Translation": "翻译",
+    "TranslationList": "翻译列表"
+  },
+  "menu_names": {
+    "Dialogues": "对话",
+    "Comics": "漫画",
+    "Dictation": "听写",
+    "Translations": "翻译"
+  },
+  "fields": {
+    "title": "标题",
+    "type": "类型",
+    "description": "描述",
+    "IsPublic": "是公开的吗？",
+    "originalLanguage": "原始语言",
+    "translatedLanguage": "翻译语言",
+    "originalText": "原文",
+    "translatedText": "翻译文本",
+    "yourText": "你的文字"
+  },
+  "buttons": {
+    "Create": "创造",
+    "Translate": "翻译",
+    "translate": "翻译",
+    "voice": "嗓音",
+    "save": "节省"
+  },
+  "page_title": {
+    "MainTitle": "猫鼬帮手"
+  }
+}

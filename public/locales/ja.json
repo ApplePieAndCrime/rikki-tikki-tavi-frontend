@@ -1,0 +1,43 @@
+{
+  "page_titles": {
+    "Login": "ログイン",
+    "Home": "家",
+    "CreateDialogue": "ダイアログを作成する",
+    "Dialogue": "ダイアログ",
+    "EditDialogue": "ダイアログを編集",
+    "DialogueList": "対話リスト",
+    "DictationList": "ディクテーション リスト",
+    "CreateDictation": "ディクテーションを作成する",
+    "Dictation": "ディクテーション",
+    "CreateTranslations": "翻訳",
+    "Translation": "翻訳",
+    "TranslationList": "翻訳リスト"
+  },
+  "menu_names": {
+    "Dialogues": "対話",
+    "Comics": "漫画",
+    "Dictation": "口述",
+    "Translations": "翻訳"
+  },
+  "fields": {
+    "title": "タイトル",
+    "type": "タイプ",
+    "description": "説明",
+    "IsPublic": "公開ですか？",
+    "originalLanguage": "元の言語",
+    "translatedLanguage": "翻訳された言語",
+    "originalText": "原文",
+    "translatedText": "翻訳されたテキスト",
+    "yourText": "あなたのテキスト"
+  },
+  "buttons": {
+    "Create": "作成",
+    "Translate": "翻訳",
+    "translate": "翻訳",
+    "voice": "声",
+    "save": "保存"
+  },
+  "page_title": {
+    "MainTitle": "マングースヘルパー"
+  }
+}

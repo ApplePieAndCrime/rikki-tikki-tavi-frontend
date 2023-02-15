@@ -1,0 +1,44 @@
+{
+  "Home": "Домик",
+  "page_titles": {
+    "EditDialogue": "Редактировать диалог",
+    "CreateDialogue": "Создать диалог",
+    "Login": "Войти",
+    "Home": "Дом",
+    "Dialogue": "Диалог",
+    "DialogueList": "Список диалогов",
+    "DictationList": "Список диктантов",
+    "CreateDictation": "Создать диктант",
+    "Dictation": "Диктант",
+    "CreateTranslations": "Переводы",
+    "Translation": "Перевод",
+    "TranslationList": "Список переводов"
+  },
+  "menu_names": {
+    "Dialogues": "Диалоги",
+    "Comics": "Комиксы",
+    "Dictation": "Диктанты",
+    "Translations": "Переводы"
+  },
+  "fields": {
+    "title": "Заголовок",
+    "type": "Тип",
+    "description": "Описание",
+    "IsPublic": "Публичный?",
+    "originalLanguage": "Исходный язык",
+    "translatedLanguage": "Язык перевода",
+    "originalText": "Оригинальный текст",
+    "translatedText": "Переведенный текст",
+    "yourText": "Ваш текст"
+  },
+  "buttons": {
+    "Create": "Создать",
+    "Translate": "перевести",
+    "translate": "перевести",
+    "voice": "голос",
+    "save": "сохранить"
+  },
+  "page_title": {
+    "MainTitle": "Мангуст помощник"
+  }
+}

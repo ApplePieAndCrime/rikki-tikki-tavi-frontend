@@ -1,0 +1,44 @@
+{
+  "page_titles": {
+    "Home": "Home",
+    "DialogueList": "Dialogue list",
+    "Dialogue": "Dialogue",
+    "EditDialogue": "Edit Dialogue",
+    "CreateDialogue": "Create Dialogue",
+    "Login": "Sign in",
+    "DictationList": "Dictation list",
+    "CreateDictation": "Create dictation",
+    "Dictation": "Dictation",
+    "CreateTranslations": "Translations",
+    "TranslationsList": "Translation",
+    "Translation": "Translation",
+    "TranslationList": "Translation list"
+  },
+  "menu_names": {
+    "Dialogues": "Dialogues",
+    "Comics": "Comics",
+    "Dictation": "Dictations",
+    "Translations": "Translations"
+  },
+  "fields": {
+    "title": "Title",
+    "type": "Type",
+    "description": "Description",
+    "IsPublic": "Is public?",
+    "originalLanguage": "Original language",
+    "translatedLanguage": "Translated language",
+    "originalText": "Original text",
+    "translatedText": "Translated text",
+    "yourText": "Your text"
+  },
+  "buttons": {
+    "Create": "сreate",
+    "Translate": "translate",
+    "translate": "translate",
+    "voice": "voice",
+    "save": "save"
+  },
+  "page_title": {
+    "MainTitle": "Mongoose helper"
+  }
+}
