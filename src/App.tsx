@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useContext, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { createBrowserRouter } from 'react-router-dom';
@@ -20,6 +20,8 @@ import Home from './pages/Home/HomePage/Home';
 import TranslationList from './pages/Translations/TranslationList';
 import CreateTranslations from './pages/Translations/CreateTranslation';
 import Translation from './pages/Translations/Translation';
+import { Context } from '.';
+import ForgotPassword from './pages/Login/ForgotPassword';
 
 function App() {
   const { t, i18n, ready } = useTranslation();
@@ -27,6 +29,10 @@ function App() {
   const routerList = createBrowserRouter([
     {
       path: '/',
+      element: <Home />,
+    },
+    {
+      path: '/home',
       element: <Home />,
     },
 
@@ -37,6 +43,10 @@ function App() {
     {
       path: '/register',
       element: <Registration />,
+    },
+    {
+      path: '/forgot-password',
+      element: <ForgotPassword />,
     },
     {
       path: '/dialogues',

@@ -11,7 +11,9 @@
     "Dictation": "Diktat",
     "CreateTranslations": "Übersetzungen",
     "Translation": "Übersetzung",
-    "TranslationList": "Übersetzungsliste"
+    "TranslationList": "Übersetzungsliste",
+    "Registration": "Anmeldung",
+    "Logout": "austragen"
   },
   "menu_names": {
     "Dialogues": "Dialoge",
@@ -39,5 +41,18 @@
   },
   "page_title": {
     "MainTitle": "Mungo-Helfer"
+  },
+  "error": {
+    "Access denied": "Zugriff abgelehnt",
+    "Unknown error": "Unbekannter Fehler",
+    "FillFields": "Füllen Sie alle Felder aus"
+  },
+  "SignIn": "anmelden",
+  "SignUp": "Anmeldung",
+  "text": {
+    "Dont_have_account": "Sie haben kein Konto?",
+    "Forgot_password": "Passwort vergessen?",
+    "Your_Email": "Deine E-Mail",
+    "Send": "Schicken"
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -10,35 +10,15 @@ import { apiUrl } from './utils/constants/base';
 
 import { ThemeProvider } from '@mui/material';
 import { theme } from './theme';
+import Store from './store/store';
 
-axios.defaults.baseURL = apiUrl;
-// axios.defaults.headers.common['Authorization'] = 'AUTH TOKEN';
-axios.defaults.headers.post['Content-Type'] = 'application/json';
+interface StoreProps {
+  store: Store;
+}
 
-axios.interceptors.request.use(
-  request => {
-    console.log({ request });
-    // Edit request config
-    return request;
-  },
-  error => {
-    console.log(error);
-    return Promise.reject(error);
-  }
-);
+const store = new Store();
 
-axios.interceptors.response.use(
-  response => {
-    console.log({ response });
-    // Edit response config
-    // return response.data.data;
-    return response;
-  },
-  error => {
-    console.log(error);
-    return Promise.reject(error);
-  }
-);
+export const Context = createContext<StoreProps>({ store });
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -46,7 +26,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <Context.Provider value={{ store }}>
+        <App />
+      </Context.Provider>
     </ThemeProvider>
   </React.StrictMode>
 );

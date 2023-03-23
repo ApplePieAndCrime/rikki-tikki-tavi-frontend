@@ -4,7 +4,7 @@ const useFormikHook = (formik: FormikValues) => {
   const FormikField = (name: string, ...rest: any[]) => {
     return {
       name,
-      value: formik[name],
+      value: formik.values[name],
       onChange: formik.handleChange,
       error: !!formik.errors[name],
       helperText: formik.errors[name],

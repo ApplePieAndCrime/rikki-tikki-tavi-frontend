@@ -12,7 +12,9 @@
     "Dictation": "Диктант",
     "CreateTranslations": "Переводы",
     "Translation": "Перевод",
-    "TranslationList": "Список переводов"
+    "TranslationList": "Список переводов",
+    "Registration": "Регистрация",
+    "Logout": "Выйти"
   },
   "menu_names": {
     "Dialogues": "Диалоги",
@@ -40,5 +42,18 @@
   },
   "page_title": {
     "MainTitle": "Мангуст помощник"
+  },
+  "error": {
+    "Access denied": "Доступ запрещен",
+    "Unknown error": "Неизвестная ошибка",
+    "FillFields": "Заполните все поля"
+  },
+  "SignIn": "Войти",
+  "SignUp": "Зарегистрироваться",
+  "text": {
+    "Dont_have_account": "У вас нет аккаунта?",
+    "Forgot_password": "Забыли пароль?",
+    "Your_Email": "Ваш email",
+    "Send": "Отправить"
   }
 }

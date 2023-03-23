@@ -30,3 +30,16 @@ export interface TranslatorProps {
   to: string;
   text: string;
 }
+
+export interface UserProps {
+  id: string;
+  email: string;
+  username: string;
+  isAdmin: boolean;
+}
+
+export interface RegisterProps {
+  email: string;
+  username: string;
+  password: string;
+}

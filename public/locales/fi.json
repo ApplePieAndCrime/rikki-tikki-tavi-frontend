@@ -11,7 +11,9 @@
     "Dictation": "Sanelu",
     "CreateTranslations": "Käännökset",
     "Translation": "Käännös",
-    "TranslationList": "Käännösluettelo"
+    "TranslationList": "Käännösluettelo",
+    "Registration": "Rekisteröinti",
+    "Logout": "Kirjaudu ulos"
   },
   "menu_names": {
     "Dialogues": "Dialogit",
@@ -39,5 +41,18 @@
   },
   "page_title": {
     "MainTitle": "Mongoose-apulainen"
+  },
+  "error": {
+    "Access denied": "Pääsy evätty",
+    "Unknown error": "Tuntematon virhe",
+    "FillFields": "Täytä kaikki kentät"
+  },
+  "SignIn": "Kirjaudu sisään",
+  "SignUp": "Kirjaudu",
+  "text": {
+    "Dont_have_account": "Eikö sinulla ole tiliä?",
+    "Forgot_password": "Unohtuiko salasana?",
+    "Your_Email": "Sähköpostisi",
+    "Send": "Lähettää"
   }
 }

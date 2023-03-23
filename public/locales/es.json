@@ -11,7 +11,9 @@
     "Dictation": "Dictado",
     "CreateTranslations": "Traducciones",
     "Translation": "Traducción",
-    "TranslationList": "Lista de traducción"
+    "TranslationList": "Lista de traducción",
+    "Registration": "Registro",
+    "Logout": "desconectar"
   },
   "menu_names": {
     "Dialogues": "Diálogos",
@@ -39,5 +41,18 @@
   },
   "page_title": {
     "MainTitle": "ayudante de mangosta"
+  },
+  "error": {
+    "Access denied": "Acceso denegado",
+    "Unknown error": "Error desconocido",
+    "FillFields": "Rellena todos los campos"
+  },
+  "SignIn": "Iniciar sesión",
+  "SignUp": "Inscribirse",
+  "text": {
+    "Dont_have_account": "¿No tienes una cuenta?",
+    "Forgot_password": "¿Has olvidado tu contraseña?",
+    "Your_Email": "Tu correo electrónico",
+    "Send": "Enviar"
   }
 }

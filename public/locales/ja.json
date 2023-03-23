@@ -11,7 +11,9 @@
     "Dictation": "ディクテーション",
     "CreateTranslations": "翻訳",
     "Translation": "翻訳",
-    "TranslationList": "翻訳リスト"
+    "TranslationList": "翻訳リスト",
+    "Registration": "登録",
+    "Logout": "サインアウト"
   },
   "menu_names": {
     "Dialogues": "対話",
@@ -39,5 +41,18 @@
   },
   "page_title": {
     "MainTitle": "マングースヘルパー"
+  },
+  "error": {
+    "Access denied": "アクセス拒否",
+    "Unknown error": "不明なエラー",
+    "FillFields": "すべてのフィールドに入力してください"
+  },
+  "SignIn": "ログイン",
+  "SignUp": "サインアップ",
+  "text": {
+    "Dont_have_account": "アカウントをお持ちでない場合",
+    "Forgot_password": "パスワードをお忘れですか？",
+    "Your_Email": "あなたの電子メール",
+    "Send": "送信"
   }
 }

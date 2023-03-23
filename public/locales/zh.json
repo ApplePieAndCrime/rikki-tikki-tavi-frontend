@@ -11,7 +11,9 @@
     "Dictation": "听写",
     "CreateTranslations": "翻译",
     "Translation": "翻译",
-    "TranslationList": "翻译列表"
+    "TranslationList": "翻译列表",
+    "Registration": "登记",
+    "Logout": "登出"
   },
   "menu_names": {
     "Dialogues": "对话",
@@ -39,5 +41,18 @@
   },
   "page_title": {
     "MainTitle": "猫鼬帮手"
+  },
+  "error": {
+    "Access denied": "拒绝访问",
+    "Unknown error": "未知错误",
+    "FillFields": "填写所有字段"
+  },
+  "SignIn": "登入",
+  "SignUp": "报名",
+  "text": {
+    "Dont_have_account": "没有帐户?",
+    "Forgot_password": "忘记密码？",
+    "Your_Email": "你的邮件",
+    "Send": "发送"
   }
 }

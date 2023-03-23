@@ -1,6 +1,6 @@
 import Main from '../../../components/Main';
 import { t } from 'i18next';
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
@@ -28,6 +28,7 @@ import GTranslateIcon from '@mui/icons-material/GTranslate';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 import MoveDownIcon from '@mui/icons-material/MoveDown';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
+import { Context } from '../../..';
 
 const Home = () => {
   // let { id = '' } = useParams();
@@ -59,6 +60,18 @@ const Home = () => {
       icon: (props: any) => <LocalLibraryIcon {...props} />,
     },
   ];
+
+  const { store } = useContext(Context);
+
+  // useEffect(() => {
+  //   console.log('local main', localStorage.getItem('token'));
+  //   if (localStorage.getItem('token')) {
+  //     store.checkAuth();
+  //   } else {
+  //     window.location.replace('login');
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     <Main title={t('page_titles.Home')}>

@@ -12,7 +12,9 @@
     "CreateTranslations": "Translations",
     "TranslationsList": "Translation",
     "Translation": "Translation",
-    "TranslationList": "Translation list"
+    "TranslationList": "Translation list",
+    "Registration": "Registration",
+    "Logout": "Sign out"
   },
   "menu_names": {
     "Dialogues": "Dialogues",
@@ -40,5 +42,18 @@
   },
   "page_title": {
     "MainTitle": "Mongoose helper"
+  },
+  "error": {
+    "Access denied": "Access denied",
+    "Unknown error": "Unknown error",
+    "FillFields": "Fill in all the fields"
+  },
+  "SignIn": "Sign in",
+  "SignUp": "Sign Up",
+  "text": {
+    "Dont_have_account": "Don't have an account?",
+    "Forgot_password": "Forgot password?",
+    "Your_Email": "Your email",
+    "Send": "Send"
   }
 }

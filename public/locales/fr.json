@@ -11,7 +11,9 @@
     "Dictation": "Dictation",
     "CreateTranslations": "Traductions",
     "Translation": "Traduction",
-    "TranslationList": "Liste de traduction"
+    "TranslationList": "Liste de traduction",
+    "Registration": "Inscription",
+    "Logout": "se déconnecter"
   },
   "menu_names": {
     "Dialogues": "Dialogues",
@@ -39,5 +41,18 @@
   },
   "page_title": {
     "MainTitle": "Aide à la mangouste"
+  },
+  "error": {
+    "Access denied": "Accès refusé",
+    "Unknown error": "Erreur inconnue",
+    "FillFields": "Remplissez tous les champs"
+  },
+  "SignIn": "S'identifier",
+  "SignUp": "S'inscrire",
+  "text": {
+    "Dont_have_account": "Vous n'avez pas de compte ?",
+    "Forgot_password": "Mot de passe oublié?",
+    "Your_Email": "Votre e-mail",
+    "Send": "Envoyer"
   }
 }

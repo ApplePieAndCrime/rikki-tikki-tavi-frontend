@@ -11,22 +11,36 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import { LockOutlined } from '@mui/icons-material';
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
 
 import axios from 'axios';
 import { apiUrl, googleClientId } from '../../utils/constants/base';
 import Main from '../../components/Main';
+import { t } from 'i18next';
+import { Context } from '../..';
+import { RegisterProps } from '../../utils/constants/props';
+import AuthService from '../../services/AuthService';
+import { redirect, useNavigate } from 'react-router';
+import { observer } from 'mobx-react-lite';
 
 const Registration = () => {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const { store } = useContext(Context);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    const formData = new FormData(event.currentTarget);
+    // console.log({
+    //   email: data.get('email'),
+    //   password: data.get('password'),
+    // });
+    const data = Object.fromEntries(formData.entries());
+
+    await store
+      .registration(data as unknown as RegisterProps)
+      .then(() => navigate('/'));
   };
 
   return (
@@ -52,7 +66,7 @@ const Registration = () => {
                 <LockOutlined />
               </Avatar>
               <Typography component="h1" variant="h5">
-                Register
+                {t('page_titles.Registration')}
               </Typography>
             </Box>
             <Box
@@ -65,13 +79,8 @@ const Registration = () => {
                 <GoogleLogin
                   type="icon"
                   onSuccess={async credentialResponse => {
-                    console.log(credentialResponse);
-                    const { data } = await axios.post(
-                      `${apiUrl}/auth/login-google`,
-                      {
-                        // pass the token as part of the req body
-                        token: credentialResponse.credential,
-                      }
+                    const data = await AuthService.loginGoogle(
+                      credentialResponse
                     );
 
                     console.log({ data });
@@ -96,11 +105,21 @@ const Registration = () => {
               margin="normal"
               required
               fullWidth
+              type="email"
               id="email"
               label="Email Address"
               name="email"
               autoComplete="email"
               autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="username"
+              label="Username"
+              type="text"
+              id="username"
             />
             <TextField
               margin="normal"
@@ -122,12 +141,12 @@ const Registration = () => {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign In
+              {t('SignUp')}
             </Button>
             <Grid display="flex" justifyContent="center">
               <Grid>
                 <Link href="login" variant="body2">
-                  {'Sign In'}
+                  {t('page_titles.Login')}
                 </Link>
               </Grid>
             </Grid>
@@ -139,4 +158,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default observer(Registration);

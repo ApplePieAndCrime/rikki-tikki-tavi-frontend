@@ -7,23 +7,35 @@ import {
   ListItemIcon,
   Typography,
 } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import CreateDictation from './CreateDictation';
 import Dictation from './Dictation';
 import { getTextListRequest } from '../text-requests';
 import { TextProps } from '../../utils/constants/props';
+import { Context } from '../..';
+import { observer } from 'mobx-react-lite';
 
 const DictationList = () => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
+
+  const { store } = useContext(Context);
 
   useEffect(() => {
     getTextListRequest({ where: { type: 'dictation' } }).then(res =>
       // @ts-ignore
       setData(res)
     );
+    store.setUser({
+      id: 'dfdf',
+      email: 'hyu',
+      username: 'huilo',
+      isAdmin: true,
+    });
+
+    console.log({ user: store.user });
   }, []);
 
   return (
@@ -53,4 +65,4 @@ const DictationList = () => {
   );
 };
 
-export default DictationList;
+export default observer(DictationList);

@@ -11,7 +11,9 @@
     "Dictation": "Dictatio",
     "CreateTranslations": "Translations",
     "Translation": "Translation",
-    "TranslationList": "Index translationis"
+    "TranslationList": "Index translationis",
+    "Registration": "Registration",
+    "Logout": "Exscribe"
   },
   "menu_names": {
     "Dialogues": "Dialogi",
@@ -39,5 +41,18 @@
   },
   "page_title": {
     "MainTitle": "Mongoose adiutor"
+  },
+  "error": {
+    "Access denied": "Aditus denegatus",
+    "Unknown error": "Ignotis error",
+    "FillFields": "Imple in omnibus agris"
+  },
+  "SignIn": "Inscribe",
+  "SignUp": "Sign up",
+  "text": {
+    "Dont_have_account": "Don't have an account?",
+    "Forgot_password": "Oblitusne es tesserae?",
+    "Your_Email": "Tua epistula electronica",
+    "Send": "Mitte"
   }
 }

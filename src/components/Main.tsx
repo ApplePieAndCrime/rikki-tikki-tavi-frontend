@@ -1,7 +1,10 @@
 import { Box } from '@mui/material';
-import React, { useMemo } from 'react';
+import { observer } from 'mobx-react-lite';
+import React, { useContext, useEffect, useMemo } from 'react';
 
 import { PropsWithChildren } from 'react';
+import { redirect, useLocation } from 'react-router';
+import { Context } from '..';
 
 import Footer from './Footer';
 import Header from './Header';
@@ -13,7 +16,7 @@ export interface IFooBarComponentProps {
 const Main = (props: PropsWithChildren<IFooBarComponentProps>) => {
   const { title, children } = props;
 
-  const changedTitle = useMemo(()=>title,[title])
+  const changedTitle = useMemo(() => title, [title]);
 
   return (
     <>
@@ -33,4 +36,4 @@ const Main = (props: PropsWithChildren<IFooBarComponentProps>) => {
   );
 };
 
-export default Main;
+export default observer(Main);

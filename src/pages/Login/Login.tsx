@@ -11,7 +11,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { KeyOutlined } from '@mui/icons-material';
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
 
@@ -19,17 +19,57 @@ import axios from 'axios';
 import { apiUrl, googleClientId } from '../../utils/constants/base';
 import { useTranslation } from 'react-i18next';
 import Main from '../../components/Main';
+import BaseAlert from '../../components/alert/BaseAlert';
+
+import { redirect, useNavigate } from 'react-router';
+import { Context } from '../..';
+import AuthService from '../../services/AuthService';
+import { observer } from 'mobx-react-lite';
 
 const Login = () => {
   const { t } = useTranslation();
+  const [showAlert, setShowAlert] = useState(false);
+  const [errorText, setErrorText] = useState('');
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const { store } = useContext(Context);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    // const data = new FormData(event.currentTarget);
+    // const email = data.get('email') || '';
+    // const password = data.get('password') || '';
+
+    // const { email, password } = data.getAll();
+
+    // const { email, password } = event.target;
+    // @ts-ignore
+    const email = event.target.email.value;
+    // @ts-ignore
+    const password = event.target.password.value;
+
     console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+      email,
+      password,
     });
+    if (!email || !password) {
+      setShowAlert(true);
+      setErrorText(t(`error.FillFields`) || '');
+      return;
+    }
+
+    const tokens = await store
+      .login(email, password)
+      .then(() => {
+        console.log('login func');
+        navigate('/');
+      })
+      .catch(err => {
+        console.log('req error', err);
+        setShowAlert(true);
+        // @ts-ignore
+        setErrorText(t(`error.${err.errorMessage}`, t('error.Unknown error')));
+      });
   };
 
   return (
@@ -68,13 +108,8 @@ const Login = () => {
                 <GoogleLogin
                   type="icon"
                   onSuccess={async credentialResponse => {
-                    console.log(credentialResponse);
-                    const { data } = await axios.post(
-                      `${apiUrl}/auth/login-google`,
-                      {
-                        // pass the token as part of the req body
-                        token: credentialResponse.credential,
-                      }
+                    const data = await AuthService.loginGoogle(
+                      credentialResponse
                     );
 
                     console.log({ data });
@@ -102,6 +137,7 @@ const Login = () => {
               id="email"
               label="Email Address"
               name="email"
+              type="email"
               autoComplete="email"
               autoFocus
             />
@@ -124,18 +160,19 @@ const Login = () => {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              // onClick={LoginUser}
             >
               {t('page_titles.Login')}
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
+                <Link href="/forgot-password" variant="body2">
+                  {t('text.Forgot_password')}
                 </Link>
               </Grid>
               <Grid item>
                 <Link href="/register" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                  {t('text.Dont_have_account')}
                 </Link>
               </Grid>
             </Grid>
@@ -143,8 +180,14 @@ const Login = () => {
           </Box>
         </Box>
       </Container>
+      <BaseAlert
+        open={showAlert}
+        setOpen={setShowAlert}
+        severity="error"
+        text={errorText}
+      />
     </Main>
   );
 };
 
-export default Login;
+export default observer(Login);

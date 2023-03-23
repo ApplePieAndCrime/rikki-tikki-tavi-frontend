@@ -21,17 +21,20 @@ import _, { get } from 'lodash';
 import { updateOneTextRequest } from '../text-requests';
 import CustomSpeech from '../../components/Speech';
 import MediaControlCard from '../../components/MediaControlCard';
+import { HighlightedText } from '../../components/MediaControlCard';
 import { getOneTextByIdRequest } from '../text-requests';
+import TestAudio from '../../components/TestAudio';
 
 const Translation = () => {
   const { t, i18n } = useTranslation();
   const params = useParams();
   const { id = '' } = params;
   const [translatedText, setTranslatedText] = useState('');
-  const [speech, setSpeech] = useState('');
   const [userText, setUserText] = useState('');
   const [textWithErrors, setTextWithErrors] = useState('');
   const [errorsCount, setErrorsCount] = useState(0);
+  const [isOriginalInputDisabled, setOriginalInputDisabled] = useState(false);
+  const [highlightedText, setHighlightedText] = useState('');
 
   // const [ourText, setOurText] = useState("")
   // const msg = new SpeechSynthesisUtterance()
@@ -94,8 +97,12 @@ const Translation = () => {
     getOneTextByIdRequest(id).then(data => {
       console.log('get one', data);
       formik.setValues(data);
+      // const obj = Object.keys(data).map(key => {
+      //   formik.setFieldTouched(key);
+      // });
+      // formik.setTouched(obj);
     });
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     console.log('useState translatedText', translatedText);
@@ -183,7 +190,9 @@ const Translation = () => {
         >
           <MediaControlCard
             title={formik.values.title}
+            text={formik.values.originalText}
             imageUrl={formik.values.imageUrl}
+            setTextDisabled={() => setOriginalInputDisabled(true)}
             setImageUrl={(url: string) => {
               console.log('setImage');
               formik.setFieldValue('imageUrl', url);
@@ -214,13 +223,20 @@ const Translation = () => {
                 <MenuItem value={lang.code}>{lang.code}</MenuItem>
               ))}
             </Select>
-            <TextField
-              {...FormikField('originalText')}
-              label={t('fields.originalText')}
-              sx={{ ...fieldsStyle }}
-              multiline
-              minRows={7}
-            />
+            {!isOriginalInputDisabled ? (
+              <TextField
+                {...FormikField('originalText')}
+                label={t('fields.originalText')}
+                sx={{ ...fieldsStyle }}
+                multiline
+                minRows={7}
+              />
+            ) : (
+              <TestAudio
+                originalText={formik.values.originalText}
+                setTextDisabled={setOriginalInputDisabled}
+              />
+            )}
           </Box>
           <Box>
             <Select

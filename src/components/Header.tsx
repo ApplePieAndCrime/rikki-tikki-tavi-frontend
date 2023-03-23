@@ -7,10 +7,13 @@ import {
   Typography,
 } from '@mui/material';
 
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ChooseLang from './ChooseLang';
 import { Link, useLocation } from 'react-router-dom';
+import { Context } from '..';
+import AuthService from '../services/AuthService';
+import { observer } from 'mobx-react-lite';
 
 export interface HeaderProps {
   title: string;
@@ -26,6 +29,8 @@ const Header = (props: HeaderProps) => {
 
   const { title } = props;
   console.log({ title });
+  const { store } = useContext(Context);
+  console.log({ store });
 
   // useEffect(() => {
   //   changeLanguage('en');
@@ -58,9 +63,19 @@ const Header = (props: HeaderProps) => {
               )}
             </Typography>
             <Box display="flex" sx={{ flexGrow: 1 }} justifyContent="flex-end">
-              <Button color="inherit" href="/login" sx={{ marginRight: 3 }}>
-                {t('page_titles.Login')}
-              </Button>
+              {store.isAuth ? (
+                <Button
+                  color="inherit"
+                  onClick={() => store.logout()}
+                  sx={{ marginRight: 3 }}
+                >
+                  {t('page_titles.Logout')}
+                </Button>
+              ) : (
+                <Button color="inherit" href="/login" sx={{ marginRight: 3 }}>
+                  {t('page_titles.Login')}
+                </Button>
+              )}
               <ChooseLang onChange={changeLanguage} />
             </Box>
           </Toolbar>
@@ -70,4 +85,4 @@ const Header = (props: HeaderProps) => {
   );
 };
 
-export default Header;
+export default observer(Header);
